@@ -18,9 +18,7 @@ from django.contrib import admin
 from simplemooc.core import views
 
 urlpatterns = [
-    # url(r'^$', include('simplemooc.core.urls')),
-    url(r'^$', views.home, name='home'),
-    url(r'^contato/$', views.contato, name='contato'),
+    url(r'^', include('simplemooc.core.urls', namespace='core')),
     url(r'^admin/', admin.site.urls),
 
 ]
