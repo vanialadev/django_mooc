@@ -25,7 +25,7 @@ SECRET_KEY = 'q_i!jc5_v=kq)ys)9#2yi*cclo_!rkn2mk06bj)&76tjtj-$xu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.1.5']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.1.5', '192.168.1.10']
 
 
 # Application definition
@@ -122,3 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
+MEDIA_URL = '/media/'
