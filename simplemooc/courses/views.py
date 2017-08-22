@@ -29,6 +29,7 @@ def details(request, slug):
         form = ContactCourse(request.POST)
         if form.is_valid():
             context['is_valid'] = True
+            form.send_emai(course)
             print(form.cleaned_data['name'])
             print(form.cleaned_data['email'])
             print(form.cleaned_data['message'])
