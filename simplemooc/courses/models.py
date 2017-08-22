@@ -30,6 +30,11 @@ class Course(models.Model):
     objects = CourseManager()
 
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('courses:details', (), {'slug': self.slug})
+
+
     def __str__(self):
         return self.name
 

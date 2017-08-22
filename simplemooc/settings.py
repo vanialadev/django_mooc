@@ -25,7 +25,7 @@ SECRET_KEY = 'q_i!jc5_v=kq)ys)9#2yi*cclo_!rkn2mk06bj)&76tjtj-$xu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.1.5', '192.168.1.10']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', '192.168.1.5', '192.168.1.10', 'localhost', '192.168.1.15']
 
 
 # Application definition
@@ -123,3 +123,13 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
 MEDIA_URL = '/media/'
+
+#Emails
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 587
